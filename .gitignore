@@ -1,0 +1,13 @@
+# Ignore all .exe files
+*.exe
+
+# Ignore log files
+*.log
+
+# Ignore node_modules folder (for JavaScript projects)
+node_modules/
+
+# Ignore compiled files
+*.class
+*.o
+*.out
