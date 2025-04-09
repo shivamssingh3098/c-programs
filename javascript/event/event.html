@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 100%;
+        height: 100px;
+        background-color: black;
+        color: wheat;
+        /* text-align: center; */
+        font-weight: 900;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+      }
+      .body-container {
+        width: 100%;
+        background-color: aquamarine;
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .div1 {
+        width: 500px;
+        min-height: 300px;
+        background-color: rgb(100, 107, 105);
+        display: flex;
+        /* justify-content: space-evenly; */
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      button {
+        color: rgb(234, 231, 238);
+        background-color: blueviolet;
+        border-radius: 10px;
+        padding: 10px;
+        margin-top: 10px;
+      }
+      .heading {
+        width: 100%;
+        text-align: center;
+        background-color: gray;
+      }
+      .heading-text {
+        font-weight: 600;
+        font-size: larger;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"><h1>This is Event demonstration</h1></div>
+    <!-- onClick event -->
+    <div class="body-parent-container">
+      <div class="heading"><h1 class="heading-text">OnClick Event</h1></div>
+
+      <div class="body-container">
+        <div class="div1">
+          <h3>Current Date</h3>
+          <button onclick="document.getElementById('demo').innerHTML=Date()">
+            Current date and time
+          </button>
+          <button onclick="this.innerHTML=Date()">
+            Current date and time800
+          </button>
+          <button onclick="displayDateAndTime()">call function</button>
+        </div>
+        <div id="demo" class="div1">Normal div</div>
+      </div>
+    </div>
+    <!-- onhover event -->
+    <div class="body-parent-container">
+      <div class="heading"><h1 class="heading-text">Onhover Event</h1></div>
+
+      <div class="body-container">
+        <div class="div1">
+          <h3>Current Date</h3>
+          <button
+            onmouseover="document.getElementById('demo1').innerHTML=Date()"
+          >
+            Current date and time
+          </button>
+          <button onmouseover="this.innerHTML=Date()">
+            Current date and time800
+          </button>
+          <button onmouseover="displayDateAndTimeOnHover()">
+            call function
+          </button>
+        </div>
+        <div id="demo1" class="div1">Normal div</div>
+      </div>
+    </div>
+    <!-- onMouseOut event -->
+    <div class="body-parent-container">
+      <div class="heading"><h1 class="heading-text">onMouseOut event</h1></div>
+
+      <div class="body-container">
+        <div class="div1">
+          <h3>Current Date</h3>
+          <button
+            onmouseout="document.getElementById('demo2').innerHTML=Date()"
+          >
+            on mouse out
+          </button>
+          <button onmouseout="this.innerHTML=Date()">on mouse out</button>
+          <button onmouseout="displayDateAndTimeOnMouseOut()">
+            on mouse out
+          </button>
+        </div>
+        <div id="demo2" class="div2">Normal div</div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    function displayDateAndTime() {
+      document.getElementById("demo").innerHTML =
+        "this is the function i am calling this function on click event";
+    }
+    function displayDateAndTimeOnHover() {
+      document.getElementById("demo1").innerHTML =
+        "this is the function i am calling this function on click event";
+    }
+
+    function displayDateAndTimeOnMouseOut() {
+      document.getElementById("demo2").innerHTML =
+        "this is the function i am calling this function on click event";
+    }
+  </script>
+</html>
