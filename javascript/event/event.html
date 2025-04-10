@@ -114,9 +114,43 @@
         <div id="demo2" class="div2">Normal div</div>
       </div>
     </div>
+    <!-- onChange event -->
+    <div class="body-parent-container">
+      <div class="heading"><h1 class="heading-text">onMouseOut event</h1></div>
+
+      <div class="body-container">
+        <div class="div1">
+          <h3>Current Date</h3>
+          <button
+            onmouseout="document.getElementById('demo2').innerHTML=Date()"
+          >
+            on mouse out
+          </button>
+
+          <div class="textField">
+            <input type="text" id="textField1" onchange="onchangeEvent()" />
+          </div>
+
+          <button onmouseout="this.innerHTML=Date()">on mouse out</button>
+          <button onmouseout="displayDateAndTimeOnMouseOut()">
+            on mouse out
+          </button>
+          <b>shviam</b>
+        </div>
+        <div id="text1" class="div2">Normal div</div>
+      </div>
+    </div>
   </body>
 
   <script>
+    let a = 1;
+    function onchangeEvent() {
+      console.log(a++);
+
+      let text = (document.getElementById("textField1").innerHTML =
+        "shivam singh");
+      document.getElementById("text1").innerHTML = a;
+    }
     function displayDateAndTime() {
       document.getElementById("demo").innerHTML =
         "this is the function i am calling this function on click event";

@@ -25,3 +25,12 @@ let obj = {
 
 // let arr= obj
 console.log(Object.entries(obj));
+
+//weakset
+
+let ws = new WeakSet();
+let ob1 = { name: "shivam" };
+let ob2 = { age: 30 };
+console.log(ws);
+ws.add(ob1);
+console.log(ws.has(ob1));
